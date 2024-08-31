@@ -1,0 +1,84 @@
+@font-face {
+    font-family: pokemon;
+    src: url(pokemon.ttf);
+}
+
+.container {
+    display: flex;
+    
+    flex-direction: column;
+    align-items: center;
+    height: 100px;
+    font-family: pokemon;
+    letter-spacing: 5px;
+    gap: 10px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    background:  rgba(242, 17, 186, 0.533) ;
+    
+    justify-content: space-between;
+    width: 100%;
+}
+
+h1 {
+    font-size: 20px;
+}
+
+#game {
+    display: grid;
+    grid-template-columns: repeat(4, 120px);
+    grid-template-rows: repeat(4, 120px);
+    grid-gap: 10px;
+}
+.card {
+    box-shadow: 0 3px 10px rgba(29, 28, 28, 0.9);
+    border-radius: 10px;
+    position: relative;
+    transform-style: preserve-3d;
+    overflow: hidden;
+}
+
+.card > .front, .card > .back {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    backface-visibility: hidden;
+    transition: transform 0.5s;
+}
+
+.back>h2 {
+    margin: 0;
+    font-size: 16px;
+}
+
+.rotated {
+    transform: rotateY(180deg);
+}
+
+.front {
+    background-image: url("pokeball.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: black;
+}
+
+button {
+    font-size:18px;
+    background-color: #c62828;
+    color: white;
+    border-radius: 5px;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+
